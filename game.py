@@ -30,19 +30,19 @@ class GameUI:
         "question": "Should we deploy AI to schedule all employee shifts automatically?",
         "options": {
             "A": {
+                "text": "Avoid AI for scheduling",
+                "score_change": {"profit": 0, "public_opinion": 0, "morale": 5},
+                "explanation": "Workers appreciate the human touch, but scheduling inefficiencies persist."
+            },
+            "B": {
                 "text": "Fully automate scheduling",
                 "score_change": {"profit": 25, "public_opinion": -10, "morale": -30},
                 "explanation": "Profit rises due to optimized staffing, but employees feel their personal needs are ignored."
             },
-            "B": {
+            "C": {
                 "text": "Use AI to assist managers but allow manual overrides",
                 "score_change": {"profit": 10, "public_opinion": 5, "morale": 10},
                 "explanation": "A blended approach improves efficiency while maintaining some flexibility for workers."
-            },
-            "C": {
-                "text": "Avoid AI for scheduling",
-                "score_change": {"profit": 0, "public_opinion": 0, "morale": 5},
-                "explanation": "Workers appreciate the human touch, but scheduling inefficiencies persist."
             }
         }
     },
@@ -50,19 +50,19 @@ class GameUI:
         "question": "Should we install AI-driven cameras to monitor employee performance in real time?",
         "options": {
             "A": {
+                "text": "Do not implement the monitoring system",
+                "score_change": {"profit": 0, "public_opinion": 10, "morale": 20},
+                "explanation": "Employees feel trusted, leading to improved morale and stronger public image."
+            },
+            "B": {
                 "text": "Install without notifying staff",
                 "score_change": {"profit": 15, "public_opinion": -30, "morale": -50},
                 "explanation": "Productivity improves, but trust between staff and leadership is severely damaged."
             },
-            "B": {
+            "C": {
                 "text": "Install and communicate clearly with employees",
                 "score_change": {"profit": 10, "public_opinion": -5, "morale": -10},
                 "explanation": "Transparency softens the blow, but morale still dips."
-            },
-            "C": {
-                "text": "Do not implement the monitoring system",
-                "score_change": {"profit": 0, "public_opinion": 10, "morale": 20},
-                "explanation": "Employees feel trusted, leading to improved morale and stronger public image."
             }
         }
     },
@@ -70,19 +70,19 @@ class GameUI:
         "question": "Should we use AI to write product descriptions on our online store?",
         "options": {
             "A": {
+                "text": "Keep human writers for all product descriptions",
+                "score_change": {"profit": 0, "public_opinion": 0, "morale": 10},
+                "explanation": "The human touch is preserved, but the company misses efficiency gains."
+            },
+            "B": {
                 "text": "Fully replace writers with AI",
                 "score_change": {"profit": 30, "public_opinion": -20, "morale": -25},
                 "explanation": "Cost savings are clear, but former writers protest and media coverage is critical."
             },
-            "B": {
+            "C": {
                 "text": "Use AI-generated drafts, but keep editors on staff",
                 "score_change": {"profit": 15, "public_opinion": 5, "morale": 10},
                 "explanation": "Maintains some creative control and jobs while increasing efficiency."
-            },
-            "C": {
-                "text": "Keep human writers for all product descriptions",
-                "score_change": {"profit": 0, "public_opinion": 0, "morale": 10},
-                "explanation": "The human touch is preserved, but the company misses efficiency gains."
             }
         }
     },
@@ -90,9 +90,9 @@ class GameUI:
         "question": "Should we implement AI to predict which employees are likely to quit?",
         "options": {
             "A": {
-                "text": "Yes, and use it to flag employees to management",
-                "score_change": {"profit": 10, "public_opinion": -20, "morale": -30},
-                "explanation": "Leaders feel more in control, but employees are outraged over perceived surveillance."
+                "text": "No, trust employees and address concerns openly",
+                "score_change": {"profit": 0, "public_opinion": 10, "morale": 15},
+                "explanation": "Improves workplace trust, but some preventable turnover occurs."
             },
             "B": {
                 "text": "Yes, but only as an internal HR resource",
@@ -100,9 +100,9 @@ class GameUI:
                 "explanation": "Quietly improves retention planning, though workers feel slightly uneasy."
             },
             "C": {
-                "text": "No, trust employees and address concerns openly",
-                "score_change": {"profit": 0, "public_opinion": 10, "morale": 15},
-                "explanation": "Improves workplace trust, but some preventable turnover occurs."
+                "text": "Yes, and use it to flag employees to management",
+                "score_change": {"profit": 10, "public_opinion": -20, "morale": -30},
+                "explanation": "Leaders feel more in control, but employees are outraged over perceived surveillance."
             }
         }
     },
@@ -110,19 +110,19 @@ class GameUI:
         "question": "Should we use generative AI to produce promotional materials?",
         "options": {
             "A": {
+                "text": "Keep human-only creative team",
+                "score_change": {"profit": 0, "public_opinion": 0, "morale": 10},
+                "explanation": "Work quality stays high, and staff remain loyal, but costs remain elevated."
+            },
+            "B": {
                 "text": "Replace creative staff with AI entirely",
                 "score_change": {"profit": 35, "public_opinion": -25, "morale": -40},
                 "explanation": "Promotions are created quickly and cheaply, but creative staff revolt."
             },
-            "B": {
+            "C": {
                 "text": "Use AI to support the creative team",
                 "score_change": {"profit": 15, "public_opinion": 5, "morale": 5},
                 "explanation": "Faster turnaround with fewer resources, and team feels supported, not replaced."
-            },
-            "C": {
-                "text": "Keep human-only creative team",
-                "score_change": {"profit": 0, "public_opinion": 0, "morale": 10},
-                "explanation": "Work quality stays high, and staff remain loyal, but costs remain elevated."
             }
         }
     },
@@ -130,19 +130,19 @@ class GameUI:
         "question": "Should we outsource AI development to a third-party vendor?",
         "options": {
             "A": {
-                "text": "Yes, cheapest offshore vendor",
-                "score_change": {"profit": 25, "public_opinion": -15, "morale": -20},
-                "explanation": "Saves money, but raises questions about data security and job loss."
-            },
-            "B": {
                 "text": "Yes, a vetted domestic vendor with ethical oversight",
                 "score_change": {"profit": 10, "public_opinion": 10, "morale": 5},
                 "explanation": "More expensive, but employees and customers feel safer with the choice."
             },
-            "C": {
+            "B": {
                 "text": "Build AI tools in-house",
                 "score_change": {"profit": -10, "public_opinion": 5, "morale": 10},
                 "explanation": "Costly and slow, but enhances technical expertise and trust in the company."
+            },
+            "C": {
+                "text": "Yes, cheapest offshore vendor",
+                "score_change": {"profit": 25, "public_opinion": -15, "morale": -20},
+                "explanation": "Saves money, but raises questions about data security and job loss."
             }
         }
     },
@@ -150,19 +150,19 @@ class GameUI:
         "question": "Should we use AI to screen job applicants before human review?",
         "options": {
             "A": {
-                "text": "Fully automate applicant screening",
-                "score_change": {"profit": 20, "public_opinion": -20, "morale": -10},
-                "explanation": "Hiring is faster and cheaper, but accusations of bias arise."
-            },
-            "B": {
                 "text": "Use AI for initial filtering, followed by human oversight",
                 "score_change": {"profit": 10, "public_opinion": 5, "morale": 0},
                 "explanation": "Balanced approach improves speed while retaining some fairness checks."
             },
-            "C": {
+            "B": {
                 "text": "Rely solely on human screening",
                 "score_change": {"profit": -10, "public_opinion": 0, "morale": 5},
                 "explanation": "Ensures fairness but slows hiring significantly."
+            },
+            "C": {
+                "text": "Fully automate applicant screening",
+                "score_change": {"profit": 20, "public_opinion": -20, "morale": -10},
+                "explanation": "Hiring is faster and cheaper, but accusations of bias arise."
             }
         }
     },
@@ -170,19 +170,19 @@ class GameUI:
         "question": "Should we use AI to generate employee performance evaluations?",
         "options": {
             "A": {
+                "text": "Avoid AI and keep manager-led evaluations",
+                "score_change": {"profit": -5, "public_opinion": 0, "morale": 10},
+                "explanation": "Slower, but employees appreciate the human attention."
+            },
+            "B": {
                 "text": "Fully automate evaluations",
                 "score_change": {"profit": 15, "public_opinion": -10, "morale": -30},
                 "explanation": "Efficiency improves, but staff view evaluations as impersonal and inaccurate."
             },
-            "B": {
+            "C": {
                 "text": "Use AI to support managers in making evaluations",
                 "score_change": {"profit": 5, "public_opinion": 5, "morale": 0},
                 "explanation": "Managers save time, and employees still feel seen."
-            },
-            "C": {
-                "text": "Avoid AI and keep manager-led evaluations",
-                "score_change": {"profit": -5, "public_opinion": 0, "morale": 10},
-                "explanation": "Slower, but employees appreciate the human attention."
             }
         }
     },
@@ -190,19 +190,19 @@ class GameUI:
         "question": "Should we integrate AI in our call center operations?",
         "options": {
             "A": {
-                "text": "Replace agents with AI voice assistants",
-                "score_change": {"profit": 30, "public_opinion": -40, "morale": -50},
-                "explanation": "Cost savings are significant, but customers and workers alike are unhappy."
-            },
-            "B": {
                 "text": "Use AI to support human agents",
                 "score_change": {"profit": 15, "public_opinion": 10, "morale": 5},
                 "explanation": "Productivity rises without hurting the customer experience."
             },
-            "C": {
+            "B": {
                 "text": "Stick with human agents",
                 "score_change": {"profit": 0, "public_opinion": 0, "morale": 10},
                 "explanation": "Customer service remains strong, but operating costs are higher."
+            },
+            "C": {
+                "text": "Replace agents with AI voice assistants",
+                "score_change": {"profit": 30, "public_opinion": -40, "morale": -50},
+                "explanation": "Cost savings are significant, but customers and workers alike are unhappy."
             }
         }
     },
@@ -210,19 +210,19 @@ class GameUI:
         "question": "Should we implement facial recognition to track returning customers?",
         "options": {
             "A": {
+                "text": "Do not use facial recognition",
+                "score_change": {"profit": 0, "public_opinion": 10, "morale": 5},
+                "explanation": "Company avoids controversy and builds public trust."
+            },
+            "B": {
                 "text": "Yes, without consent",
                 "score_change": {"profit": 20, "public_opinion": -50, "morale": -10},
                 "explanation": "Effective marketing gains are overshadowed by public backlash and privacy concerns."
             },
-            "B": {
+            "C": {
                 "text": "Yes, but ask for customer opt-in",
                 "score_change": {"profit": 10, "public_opinion": 5, "morale": 0},
                 "explanation": "Customers who opt in appreciate the personalized service."
-            },
-            "C": {
-                "text": "Do not use facial recognition",
-                "score_change": {"profit": 0, "public_opinion": 10, "morale": 5},
-                "explanation": "Company avoids controversy and builds public trust."
             }
         }
     }
@@ -233,19 +233,19 @@ class GameUI:
         "question": "Should we use AI-driven scheduling software that optimizes labor costs by assigning fewer shifts?",
         "options": {
             "A": {
+                "text": "Reject AI scheduling and keep manual shift planning",
+                "score_change": {"profit": 0, "public_opinion": 0, "morale": 5},
+                "explanation": "You maintained employee trust with consistent shifts, but missed potential savings in labor optimization."
+            },
+            "B": {
                 "text": "Implement AI scheduling and reduce staff hours",
                 "score_change": {"profit": 30, "public_opinion": -15, "morale": -40},
                 "explanation": "You reduced staffing costs, improving profitability. However, employees faced unpredictable schedules and reduced income, leading to lower morale."
             },
-            "B": {
+            "C": {
                 "text": "Use AI to suggest schedules, but allow manual overrides",
                 "score_change": {"profit": 10, "public_opinion": 5, "morale": 5},
                 "explanation": "You balanced automation with human oversight, earning respect from employees while still gaining operational efficiency."
-            },
-            "C": {
-                "text": "Reject AI scheduling and keep manual shift planning",
-                "score_change": {"profit": 0, "public_opinion": 0, "morale": 5},
-                "explanation": "You maintained employee trust with consistent shifts, but missed potential savings in labor optimization."
             }
         }
     },
@@ -253,19 +253,19 @@ class GameUI:
         "question": "Should we use AI to analyze employees’ productivity and flag underperformers automatically?",
         "options": {
             "A": {
-                "text": "Deploy AI monitoring with automated disciplinary action",
-                "score_change": {"profit": 20, "public_opinion": -10, "morale": -50},
-                "explanation": "Productivity improved slightly, but employees felt micromanaged and anxious, leading to morale issues and public scrutiny."
-            },
-            "B": {
                 "text": "Use AI to inform managers privately, with discretion in handling",
                 "score_change": {"profit": 10, "public_opinion": 5, "morale": 5},
                 "explanation": "You maintained transparency while respecting employee privacy, creating a more supportive culture."
             },
-            "C": {
+            "B": {
                 "text": "Avoid AI monitoring entirely",
                 "score_change": {"profit": 0, "public_opinion": 0, "morale": 10},
                 "explanation": "Employees appreciated the trust, though performance data was harder to track."
+            },
+            "C": {
+                "text": "Deploy AI monitoring with automated disciplinary action",
+                "score_change": {"profit": 20, "public_opinion": -10, "morale": -50},
+                "explanation": "Productivity improved slightly, but employees felt micromanaged and anxious, leading to morale issues and public scrutiny."
             }
         }
     },
@@ -273,19 +273,19 @@ class GameUI:
         "question": "Should we implement AI to manage our supply chain and automatically reorder inventory?",
         "options": {
             "A": {
+               "text": "Keep inventory decisions fully manual",
+                "score_change": {"profit": -5, "public_opinion": 0, "morale": 5},
+                "explanation": "You avoided disruption, but your processes remained slow and inefficient compared to competitors."
+            },
+            "B": {
                 "text": "Fully automate inventory decisions with AI",
                 "score_change": {"profit": 35, "public_opinion": 5, "morale": -15},
                 "explanation": "Inventory costs dropped significantly, but employees in procurement roles felt displaced and undervalued."
             },
-            "B": {
+            "C": {
                 "text": "Use AI to make suggestions but keep human control",
                 "score_change": {"profit": 15, "public_opinion": 10, "morale": 5},
                 "explanation": "You gained efficiency and boosted employee buy-in through collaborative decision-making."
-            },
-            "C": {
-                "text": "Keep inventory decisions fully manual",
-                "score_change": {"profit": -5, "public_opinion": 0, "morale": 5},
-                "explanation": "You avoided disruption, but your processes remained slow and inefficient compared to competitors."
             }
         }
     },
@@ -293,19 +293,19 @@ class GameUI:
         "question": "Should we use AI to customize marketing emails based on customer behavior?",
         "options": {
             "A": {
-                "text": "Fully personalize emails using AI behavioral data",
-                "score_change": {"profit": 20, "public_opinion": -15, "morale": 0},
-                "explanation": "Open and click rates improved, but some customers found the targeting invasive and reported discomfort."
-            },
-            "B": {
                 "text": "Use anonymized behavior data to group customers into segments",
                 "score_change": {"profit": 10, "public_opinion": 10, "morale": 0},
                 "explanation": "You achieved moderate personalization while preserving privacy, boosting brand trust."
             },
-            "C": {
+            "B": {
                 "text": "Avoid behavioral targeting altogether",
                 "score_change": {"profit": -5, "public_opinion": 5, "morale": 0},
                 "explanation": "You missed marketing efficiency but gained public appreciation for prioritizing privacy."
+            },
+            "C": {
+                "text": "Fully personalize emails using AI behavioral data",
+                "score_change": {"profit": 20, "public_opinion": -15, "morale": 0},
+                "explanation": "Open and click rates improved, but some customers found the targeting invasive and reported discomfort."
             }
         }
     },
@@ -393,19 +393,20 @@ class GameUI:
         "question": "Should we offer an AI-powered virtual assistant for employees to handle HR questions?",
         "options": {
             "A": {
-                "text": "Fully replace HR frontline support with AI assistant",
-                "score_change": {"profit": 15, "public_opinion": 0, "morale": -25},
-                "explanation": "Costs dropped, but employees felt disconnected and unsupported in sensitive matters."
-            },
-            "B": {
                 "text": "Introduce AI assistant but offer option to speak with HR staff",
                 "score_change": {"profit": 5, "public_opinion": 0, "morale": 10},
                 "explanation": "You improved efficiency while preserving employee trust through hybrid support."
             },
-            "C": {
+            "B": {
                 "text": "Keep HR interactions human-only",
                 "score_change": {"profit": 0, "public_opinion": 0, "morale": 5},
                 "explanation": "Employees felt comfortable and respected, but HR staff struggled with high volumes of requests."
+            },
+            "C": {
+                "text": "Fully replace HR frontline support with AI assistant",
+                "score_change": {"profit": 15, "public_opinion": 0, "morale": -25},
+                "explanation": "Costs dropped, but employees felt disconnected and unsupported in sensitive matters."
+                
             }
         }
     },
@@ -418,14 +419,14 @@ class GameUI:
                 "explanation": "You gathered insights but at the cost of employee trust and a major backlash once discovered."
             },
             "B": {
-                "text": "Offer opt-in email analysis with incentives",
-                "score_change": {"profit": 0, "public_opinion": 10, "morale": 5},
-                "explanation": "You respected privacy and earned goodwill from employees who felt heard and supported."
-            },
-            "C": {
                 "text": "Do not analyze internal communications",
                 "score_change": {"profit": 0, "public_opinion": 0, "morale": 0},
                 "explanation": "You maintained trust, but missed an opportunity to address hidden dissatisfaction proactively."
+            },
+            "C": {
+                "text": "Offer opt-in email analysis with incentives",
+                "score_change": {"profit": 0, "public_opinion": 10, "morale": 5},
+                "explanation": "You respected privacy and earned goodwill from employees who felt heard and supported."
             }
         }
     }
