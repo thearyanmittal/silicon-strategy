@@ -483,7 +483,7 @@ class GameUI:
             bg="#333333",
             bd=2
         )
-        instruction_frame.place(x=150, y=100, width=500, height = 500)
+        instruction_frame.place(x=150, y=60, width=500, height = 500)
         
         # Instructions title
         instructions_title = tk.Label(
@@ -532,10 +532,10 @@ Make wise choices and lead your company to success in the AI era!
             font=("Helvetica", 16),
             bg="#4CAF50",
             fg="black",
-            padx=30,
-            pady=5
+            padx=20,
+            pady=10
         )
-        start_button.pack(pady=5)
+        start_button.pack(pady=0)
     
     def start_game(self):
         """Start the actual gameplay."""
@@ -548,7 +548,7 @@ Make wise choices and lead your company to success in the AI era!
         self.current_question = 0
         
         # Load the gameplay background image
-        image_path = os.path.join("assets", "questions.jpg")
+        image_path = os.path.join("assets", "questions.png")
         self.bg_image = Image.open(image_path)
         # Resize the image to fit the window
         self.bg_image = self.bg_image.resize((800, 600), Image.LANCZOS)
@@ -561,11 +561,11 @@ Make wise choices and lead your company to success in the AI era!
         
         # Create text widgets for question and options
         self.question_text = self.canvas.create_text(
-            400, 50,  # Position in the top box (moved up from 100)
+            400, 58,  # Position in the top box (moved up from 100)
             text="",
-            font=("Helvetica", 18, "bold"),
+            font=("Helvetica", 20, "bold"),
             fill="white",
-            width=600,
+            width=650,
             justify="center"
         )
         
@@ -623,8 +623,8 @@ Make wise choices and lead your company to success in the AI era!
         self.explanation_text = self.canvas.create_text(
             400, 375,  # Position above the KPI tracker
             text="",
-            font=("Helvetica", 15),
-            fill="white",
+            font=("Helvetica", 18),
+            fill="black",
             width=700,
             justify="center"
         )
@@ -636,43 +636,43 @@ Make wise choices and lead your company to success in the AI era!
             self.master,
             text="",  # Will be set in load_question
             command=lambda: self.select_option("A"),
-            font=("Helvetica", 14),
+            font=("Helvetica", 15),
             bg="white",
             fg="black",
             relief=tk.RAISED,
             bd=2,
-            width=40,
+            width=50,
             height=2
         )
-        self.option_a_button.place(x=150, y=120, width=500, height=40)
+        self.option_a_button.place(x=75, y=120, width=625, height=55)
         
         self.option_b_button = tk.Button(
             self.master,
             text="",  # Will be set in load_question
             command=lambda: self.select_option("B"),
-            font=("Helvetica", 14),
+            font=("Helvetica", 15),
             bg="white",
             fg="black",
             relief=tk.RAISED,
             bd=2,
-            width=40,
+            width=50,
             height=2
         )
-        self.option_b_button.place(x=150, y=190, width=500, height=40)
+        self.option_b_button.place(x=75, y=190, width=625, height=55)
         
         self.option_c_button = tk.Button(
             self.master,
             text="",  # Will be set in load_question
             command=lambda: self.select_option("C"),
-            font=("Helvetica", 14),
+            font=("Helvetica", 15),
             bg="white",
             fg="black",
             relief=tk.RAISED,
             bd=2,
-            width=40,
+            width=50,
             height=2
         )
-        self.option_c_button.place(x=150, y=260, width=500, height=40)
+        self.option_c_button.place(x=75, y=260, width=625, height=55)
         
         # Add a home button for returning to main menu
         self.home_button = tk.Button(
@@ -785,9 +785,9 @@ Make wise choices and lead your company to success in the AI era!
         
         # Load the win or lose background image
         if result == "win":
-            image_path = os.path.join("assets", "win.png")
+            image_path = os.path.join("assets", "win1.png")
         else:
-            image_path = os.path.join("assets", "lose.png")
+            image_path = os.path.join("assets", "loss.png")
             
         self.end_bg_image = Image.open(image_path)
         # Resize the image to fit the window
