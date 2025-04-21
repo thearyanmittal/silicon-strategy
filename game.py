@@ -442,7 +442,7 @@ class GameUI:
         self.clear_screen()
         
         # Load the home background image
-        image_path = os.path.join("assets", "home.jpg")
+        image_path = os.path.join("assets", "home.png")
         self.home_bg_image = Image.open(image_path)
         # Resize the image to fit the window
         self.home_bg_image = self.home_bg_image.resize((800, 600), Image.LANCZOS)
@@ -483,7 +483,7 @@ class GameUI:
             bg="#333333",
             bd=2
         )
-        instruction_frame.place(x=150, y=100, width=500, height=400)
+        instruction_frame.place(x=150, y=100, width=500, height = 500)
         
         # Instructions title
         instructions_title = tk.Label(
@@ -561,10 +561,10 @@ Make wise choices and lead your company to success in the AI era!
         
         # Create text widgets for question and options
         self.question_text = self.canvas.create_text(
-            400, 40,  # Position in the top box (moved up from 100)
+            400, 50,  # Position in the top box (moved up from 100)
             text="",
-            font=("Helvetica", 16, "bold"),
-            fill="black",
+            font=("Helvetica", 18, "bold"),
+            fill="white",
             width=600,
             justify="center"
         )
@@ -573,27 +573,27 @@ Make wise choices and lead your company to success in the AI era!
         self.option_a_text = self.canvas.create_text(
             400, 0,  # Position in the first lower box
             text="",
-            font=("Helvetica", 14),
+            font=("Helvetica", 20),
             fill="black",
-            width=500,
+            width=700,
             justify="center"
         )
         
         self.option_b_text = self.canvas.create_text(
             400, 350,  # Position in the second lower box
             text="",
-            font=("Helvetica", 14),
+            font=("Helvetica", 20),
             fill="black",
-            width=500,
+            width=700,
             justify="center"
         )
         
         self.option_c_text = self.canvas.create_text(
             400, 450,  # Position in the third lower box
             text="",
-            font=("Helvetica", 14),
+            font=("Helvetica", 20),
             fill="black",
-            width=500,
+            width=700,
             justify="center"
         )
         
@@ -624,7 +624,7 @@ Make wise choices and lead your company to success in the AI era!
             400, 375,  # Position above the KPI tracker
             text="",
             font=("Helvetica", 15),
-            fill="red",
+            fill="white",
             width=700,
             justify="center"
         )
